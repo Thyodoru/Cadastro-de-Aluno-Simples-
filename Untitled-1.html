@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+        #alunosCadastrados {
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #alunosCadastrados h2 {
+            text-align: center;
+        }
+        .aluno {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Alunos</h1>
+    <form id="formCadastro">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+        
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" required>
+        
+        <label for="curso">Curso:</label>
+        <select id="curso" name="curso" required>
+            <option value="">Selecione um curso</option>
+            <option value="Matemática">Matemática</option>
+            <option value="Física">Física</option>
+            <option value="Química">Química</option>
+            <option value="Biologia">Biologia</option>
+        </select>
+        
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" name="observacoes"></textarea>
+        
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <div id="alunosCadastrados">
+        <h2>Alunos Cadastrados</h2>
+        <div id="listaAlunos"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('formCadastro');
+        const listaAlunos = document.getElementById('listaAlunos');
+        let alunos = []; // Array para armazenar os alunos cadastrados
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            // Coleta os dados do formulário
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('
+
+
+
